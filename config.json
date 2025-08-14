@@ -8,5 +8,5 @@
   "boot": "auto",
   "options": {},
   "schema": {},
-  "run": "bash run.sh"
+  "homeassistant_api": true
 }
