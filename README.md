@@ -1,5 +1,5 @@
-WARNING!! There is no real ADDON in here!!
-          This is only for Learning and testing purposes!!! ..to learn github and HA and other projects.
+# WARNING!! There is no real ADDON in here!!
+#          This is only for Learning and testing purposes!!! ..to learn github and HA #and other projects.
 
 # HomeServiceNotifier
 
