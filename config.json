@@ -5,7 +5,9 @@
   "description": "Tracks and notifies home maintenance tasks and expenses.",
   "startup": "application",
   "arch": ["amd64", "armv7", "armhf", "aarch64", "i386"],
+  "host_network": false,
   "boot": "auto",
+  "map": ["data"],
   "options": {},
   "schema": {},
   "homeassistant_api": true
