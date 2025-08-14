@@ -3,7 +3,7 @@ FROM $BUILD_FROM
 
 # Copy addon files
 COPY run.sh /run.sh
-COPY custom_component /app
+COPY data /app
 
 RUN chmod a+x /run.sh
 
