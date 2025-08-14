@@ -1,5 +1,6 @@
 import json
 import os
+import time
 import requests
 
 DATA_FILE = "/data/data.json"
@@ -9,10 +10,7 @@ HEADERS = {
     "Content-Type": "application/json",
 }
 
-def main():
-    print("Home Service Notifier running...")
-
-    # Jos dataa ei ole, luodaan oletus
+def send_state():
     if not os.path.exists(DATA_FILE):
         data = {"next_service_date": "2025-12-31"}
         os.makedirs(os.path.dirname(DATA_FILE), exist_ok=True)
@@ -22,7 +20,6 @@ def main():
         with open(DATA_FILE, "r") as f:
             data = json.load(f)
 
-    # Lähetetään tieto HA:n state machineen
     payload = {
         "state": data["next_service_date"],
         "attributes": {
@@ -30,10 +27,12 @@ def main():
             "icon": "mdi:calendar-clock"
         }
     }
-
     resp = requests.post(HA_URL, headers=HEADERS, json=payload)
     print("HA API response:", resp.status_code, resp.text)
 
 if __name__ == "__main__":
-    main()
+    print("Home Service Notifier running...")
+    while True:
+        send_state()
+        time.sleep(3600)  # Päivitä kerran tunnissa
 
