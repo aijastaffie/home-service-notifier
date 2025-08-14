@@ -7,7 +7,7 @@
   "arch": ["amd64", "armv7", "armhf", "aarch64", "i386"],
   "host_network": false,
   "boot": "auto",
-  "map": ["data"],
+  "map": ["data:/data"],
   "options": {},
   "schema": {},
   "homeassistant_api": true
