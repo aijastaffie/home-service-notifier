@@ -1,3 +1,6 @@
+WARNING!! There is no real ADDON in here!!
+          This is only for Learning and testing purposes!!! ..to learn github and HA and other projects.
+
 # HomeServiceNotifier
 
 HomeServiceNotifier is a Home Assistant add-on to help you track and manage your home maintenance tasks and expenses.  
